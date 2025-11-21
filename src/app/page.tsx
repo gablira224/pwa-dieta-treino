@@ -592,6 +592,7 @@ export default function PlanoPerfeito() {
                   placeholder="Seu nome"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  autoComplete="name"
                   className="w-full bg-[#0B0F14] border border-[#1A1F2E] rounded-xl px-4 py-3 text-[#E6EBF2] placeholder:text-[#9AA8B2] focus:border-[#F97316] focus:outline-none transition-colors"
                 />
               </div>
@@ -604,6 +605,7 @@ export default function PlanoPerfeito() {
                 placeholder="seu@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                autoComplete="email"
                 className="w-full bg-[#0B0F14] border border-[#1A1F2E] rounded-xl px-4 py-3 text-[#E6EBF2] placeholder:text-[#9AA8B2] focus:border-[#F97316] focus:outline-none transition-colors"
               />
             </div>
@@ -615,6 +617,7 @@ export default function PlanoPerfeito() {
                 placeholder="••••••••"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                autoComplete={isLogin ? "current-password" : "new-password"}
                 className="w-full bg-[#0B0F14] border border-[#1A1F2E] rounded-xl px-4 py-3 text-[#E6EBF2] placeholder:text-[#9AA8B2] focus:border-[#F97316] focus:outline-none transition-colors"
               />
             </div>
@@ -627,6 +630,7 @@ export default function PlanoPerfeito() {
                   placeholder="••••••••"
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+                  autoComplete="new-password"
                   className="w-full bg-[#0B0F14] border border-[#1A1F2E] rounded-xl px-4 py-3 text-[#E6EBF2] placeholder:text-[#9AA8B2] focus:border-[#F97316] focus:outline-none transition-colors"
                 />
               </div>
